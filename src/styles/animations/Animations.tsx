@@ -5,6 +5,6 @@ export const MyAnimation = keyframes`
     transform: rotate(0grad);
   }
   to {
-    transform: rotate(360grad);
+    transform: rotate(180grad);
   }
 `
