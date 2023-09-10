@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
 import styled from "styled-components";
-import {hover} from "@testing-library/user-event/dist/hover";
-import {StyledBtn, SuperButton} from "./components/Button.style";
 import {Link} from "./components/Link.styled";
 import {Menu} from "./components/Menu.styled";
+import {StyledBtn} from "./components/Button.style";
 
 function App() {
     return (
@@ -17,11 +16,11 @@ function App() {
                 </ul>
             </Menu>
             <Box>
-                <StyledBtn as={Link} href={"#"}>LinkComponent</StyledBtn>
-                <Link>Link</Link>
-                <StyledBtn as="a">Link</StyledBtn>
-                <StyledBtn>Hello</StyledBtn>
-                <SuperButton>SuperButton</SuperButton>
+                {/*<StyledBtn color={"green"} fontSize={"20px"}>Hello</StyledBtn>*/}
+                {/*<StyledBtn color={"red"}>Hello</StyledBtn>*/}
+                {/*<StyledBtn fontSize={"30px"}>Hello</StyledBtn>*/}
+                <StyledBtn primary>Hello</StyledBtn>
+                <StyledBtn outlined>Hello</StyledBtn>
             </Box>
         </div>
     );
@@ -35,6 +34,7 @@ const Box = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 
   button {
     cursor: pointer;

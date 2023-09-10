@@ -1,29 +1,27 @@
 import styled from "styled-components";
 import {MyAnimation} from "../styles/animations/Animations";
 
-export const StyledBtn = styled.button`
+type StyledBtnPropsType = {
+    color?: string
+    fontSize?: string
+    primary: boolean
+    outlined: boolean
+}
+
+export const StyledBtn = styled.button<StyledBtnPropsType>`
   border: none;
-  background-color: #d91495;
+  border-radius: 10px;
+  //background-color: #fb3f78;
+  // background-color: ${props => props.color || "#fb3f78"};
   padding: 10px 20px;
   color: snow;
-  font-size: 2rem;
+  font-size: ${props => props.fontSize};
   font-weight: bold;
 
   &:hover {
     background-color: #4053cc;
   }
 
-  &:last-child {
-    background-color: chartreuse;
-  }
-`
-
-export const SuperButton = styled(StyledBtn)`
-  border-radius: 5px;
-  background-color: #ffd737;
-  color: #250707;
-
-&:hover {
-  animation: ${MyAnimation} 2s ease-in-out infinite;
-}
+  
+  
 `
