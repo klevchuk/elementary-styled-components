@@ -3,6 +3,7 @@ import './App.css';
 import styled from "styled-components";
 import {Link} from "./components/Link.styled";
 import {StyledBtn} from "./components/Button.style";
+import {myTheme} from "./styles/animations/Theme.styled";
 
 function App() {
     return (
@@ -12,8 +13,8 @@ function App() {
                 {/*<StyledBtn color={"red"}>Hello</StyledBtn>*/}
                 {/*<StyledBtn fontSize={"30px"}>Hello</StyledBtn>*/}
 
-                <StyledBtn primary>Hello</StyledBtn>
-                <StyledBtn outlined>Hello</StyledBtn>
+                <StyledBtn color ={myTheme.colors.primary} primary>Hello</StyledBtn>
+                <StyledBtn color={myTheme.colors.secondary} outlined>Hello</StyledBtn>
             </Box>
         </div>
     );
@@ -37,7 +38,7 @@ const Box = styled.div`
     cursor: zoom-in;
   }
 
-  @media screen and (max-width: 800px) {
+  @media ${myTheme.media.tablet} {
     flex-direction: column;
   }
 `
